@@ -5,6 +5,7 @@ import hlmg.users.data.UserRepository;
 import hlmg.users.shared.UserDto;
 import hlmg.users.shared.mapper.UserMapper;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
@@ -13,13 +14,13 @@ import java.util.UUID;
 @Service
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
     @Override
     public UserDto createUser(UserDto userDetails) {
         userDetails.setUserId(UUID.randomUUID().toString());
+        userDetails.setEncryptedPassword(passwordEncoder.encode(userDetails.getPassword()));
         UserEntity userEntity = UserMapper.INSTANCE.dtoToEntity(userDetails);
-
-        userEntity.setEncryptedPassword("encryptedPassword");
 
         UserEntity savedUser = userRepository.save(userEntity);
 
