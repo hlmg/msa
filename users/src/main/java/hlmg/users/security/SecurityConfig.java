@@ -35,9 +35,10 @@ public class SecurityConfig {
         return http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers(HttpMethod.POST, "/users").access(
+                        .requestMatchers(new AntPathRequestMatcher("/**")).access(
                                 new WebExpressionAuthorizationManager("hasIpAddress('" + environment.getProperty("gateway.ip") + "')"))
                         .requestMatchers(new AntPathRequestMatcher("/h2-console/**")).permitAll()
+                        .requestMatchers("/error").permitAll()
                 )
                 .addFilter(new AuthenticationFilter(authenticationManager, environment, userService))
                 .authenticationManager(authenticationManager)
