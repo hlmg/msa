@@ -55,6 +55,8 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
         Instant now = Instant.now();
 
+        String property = environment.getProperty("token.expiration_millis");
+
         String token = Jwts.builder()
                 .subject(userDto.getUserId())
                 .expiration(Date.from(now.plusMillis(Long.parseLong(environment.getProperty("token.expiration_millis")))))
