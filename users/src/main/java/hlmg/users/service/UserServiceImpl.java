@@ -4,14 +4,21 @@ import hlmg.users.data.UserEntity;
 import hlmg.users.data.UserRepository;
 import hlmg.users.shared.UserDto;
 import hlmg.users.shared.mapper.UserMapper;
+import hlmg.users.ui.model.AlbumResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.core.env.Environment;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.Collections;
+import java.util.List;
 import java.util.UUID;
 
 @RequiredArgsConstructor
@@ -19,6 +26,8 @@ import java.util.UUID;
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+    private final RestTemplate restTemplate;
+    private final Environment environment;
 
     @Override
     public UserDto createUser(UserDto userDetails) {
@@ -37,6 +46,19 @@ public class UserServiceImpl implements UserService {
                 .orElseThrow(() -> new UsernameNotFoundException(email));
 
         return UserMapper.INSTANCE.entityToDto(userEntity);
+    }
+
+    @Override
+    public UserDto getUserByUserId(String userId) {
+        UserEntity userEntity = userRepository.findByUserId(userId)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+        UserDto userDto = UserMapper.INSTANCE.entityToDto(userEntity);
+        String albumsUrl = String.format(environment.getProperty("albums.url"), userId);
+        ResponseEntity<List<AlbumResponse>> albumsListResponse = restTemplate.exchange(albumsUrl, HttpMethod.GET, null, new ParameterizedTypeReference<List<AlbumResponse>>() {
+        });
+        List<AlbumResponse> albums = albumsListResponse.getBody();
+        userDto.setAlbums(albums);
+        return userDto;
     }
 
     @Override

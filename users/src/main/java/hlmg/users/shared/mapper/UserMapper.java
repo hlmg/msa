@@ -4,6 +4,7 @@ import hlmg.users.data.UserEntity;
 import hlmg.users.shared.UserDto;
 import hlmg.users.ui.model.CreateUserRequest;
 import hlmg.users.ui.model.CreateUserResponse;
+import hlmg.users.ui.model.UserResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
@@ -23,4 +24,6 @@ public interface UserMapper {
     UserDto creatRequestToDto(CreateUserRequest createRequest);
 
     CreateUserResponse dtoToCreateResponse(UserDto userDto);
+
+    UserResponse dtoToUserResponse(UserDto userDto);
 }
