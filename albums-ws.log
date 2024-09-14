@@ -1,0 +1,86 @@
+2024-09-15T04:37:35.814+09:00  INFO 72430 --- [restartedMain] hlmg.albums.AlbumsApplication            : Starting AlbumsApplication using Java 21.0.3 with PID 72430 (/Users/min/IdeaProjects/msa/albums/target/classes started by min in /Users/min/IdeaProjects/msa)
+2024-09-15T04:37:35.817+09:00  INFO 72430 --- [restartedMain] hlmg.albums.AlbumsApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-09-15T04:37:35.874+09:00  INFO 72430 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-15T04:37:35.874+09:00  INFO 72430 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-15T04:37:36.662+09:00  INFO 72430 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=53fc0153-96af-3908-8da4-8ad797efb0c3
+2024-09-15T04:37:37.051+09:00  INFO 72430 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-09-15T04:37:37.057+09:00  INFO 72430 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-15T04:37:37.058+09:00  INFO 72430 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-09-15T04:37:37.092+09:00  INFO 72430 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-15T04:37:37.092+09:00  INFO 72430 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1217 ms
+2024-09-15T04:37:37.783+09:00  WARN 72430 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-09-15T04:37:37.795+09:00  INFO 72430 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-09-15T04:37:37.825+09:00  WARN 72430 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-09-15T04:37:37.832+09:00  INFO 72430 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-09-15T04:37:37.898+09:00  INFO 72430 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63646 (http) with context path ''
+2024-09-15T04:37:37.900+09:00  INFO 72430 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 63646
+2024-09-15T04:37:37.903+09:00  INFO 72430 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-09-15T04:37:37.929+09:00  INFO 72430 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-09-15T04:37:37.933+09:00  INFO 72430 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-09-15T04:37:37.949+09:00  INFO 72430 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-09-15T04:37:37.949+09:00  INFO 72430 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-09-15T04:37:37.949+09:00  INFO 72430 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-09-15T04:37:37.950+09:00  INFO 72430 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-09-15T04:37:37.950+09:00  INFO 72430 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-09-15T04:37:37.950+09:00  INFO 72430 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-09-15T04:37:37.950+09:00  INFO 72430 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-09-15T04:37:38.264+09:00  INFO 72430 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-09-15T04:37:38.267+09:00  INFO 72430 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-09-15T04:37:38.268+09:00  INFO 72430 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-09-15T04:37:38.273+09:00  INFO 72430 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1726342658272 with initial instances count: 1
+2024-09-15T04:37:38.274+09:00  INFO 72430 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ALBUMS-WS with eureka with status UP
+2024-09-15T04:37:38.275+09:00  INFO 72430 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1726342658275, current=UP, previous=STARTING]
+2024-09-15T04:37:38.276+09:00  INFO 72430 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:3750a651c496696e451d8233efefab2e: registering service...
+2024-09-15T04:37:38.292+09:00  INFO 72430 --- [restartedMain] hlmg.albums.AlbumsApplication            : Started AlbumsApplication in 2.976 seconds (process running for 3.805)
+2024-09-15T04:37:38.306+09:00  INFO 72430 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:3750a651c496696e451d8233efefab2e - registration status: 204
+2024-09-15T04:37:38.783+09:00  INFO 72430 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-15T04:37:38.783+09:00  INFO 72430 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-15T04:37:38.785+09:00  INFO 72430 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-15T04:42:37.962+09:00  INFO 72430 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-09-15T04:45:21.758+09:00  INFO 72430 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application ALBUMS-WS with eureka with status DOWN
+2024-09-15T04:45:21.759+09:00  INFO 72430 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1726343121759, current=DOWN, previous=UP]
+2024-09-15T04:45:21.759+09:00  INFO 72430 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:3750a651c496696e451d8233efefab2e: registering service...
+2024-09-15T04:45:21.764+09:00  INFO 72430 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:3750a651c496696e451d8233efefab2e - registration status: 204
+2024-09-15T04:45:21.772+09:00  INFO 72430 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2024-09-15T04:45:24.775+09:00  INFO 72430 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2024-09-15T04:45:24.783+09:00  INFO 72430 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:3750a651c496696e451d8233efefab2e - deregister  status: 200
+2024-09-15T04:45:24.788+09:00  INFO 72430 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2024-09-15T04:46:58.653+09:00  INFO 74607 --- [restartedMain] hlmg.albums.AlbumsApplication            : Starting AlbumsApplication using Java 21.0.3 with PID 74607 (/Users/min/IdeaProjects/msa/albums/target/classes started by min in /Users/min/IdeaProjects/msa)
+2024-09-15T04:46:58.656+09:00  INFO 74607 --- [restartedMain] hlmg.albums.AlbumsApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-09-15T04:46:58.712+09:00  INFO 74607 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-15T04:46:58.712+09:00  INFO 74607 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-15T04:46:59.575+09:00  INFO 74607 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6161e405-3122-3ea7-a0f7-ae16250105b5
+2024-09-15T04:46:59.964+09:00  INFO 74607 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-09-15T04:46:59.970+09:00  INFO 74607 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-15T04:46:59.970+09:00  INFO 74607 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-09-15T04:47:00.009+09:00  INFO 74607 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-15T04:47:00.009+09:00  INFO 74607 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1296 ms
+2024-09-15T04:47:00.805+09:00  WARN 74607 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-09-15T04:47:00.824+09:00  INFO 74607 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-09-15T04:47:00.872+09:00  WARN 74607 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-09-15T04:47:00.881+09:00  INFO 74607 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-09-15T04:47:00.964+09:00  INFO 74607 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 64064 (http) with context path ''
+2024-09-15T04:47:00.965+09:00  INFO 74607 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 64064
+2024-09-15T04:47:00.969+09:00  INFO 74607 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-09-15T04:47:01.002+09:00  INFO 74607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-09-15T04:47:01.008+09:00  INFO 74607 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-09-15T04:47:01.028+09:00  INFO 74607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-09-15T04:47:01.028+09:00  INFO 74607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-09-15T04:47:01.028+09:00  INFO 74607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-09-15T04:47:01.028+09:00  INFO 74607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-09-15T04:47:01.028+09:00  INFO 74607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-09-15T04:47:01.028+09:00  INFO 74607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-09-15T04:47:01.028+09:00  INFO 74607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-09-15T04:47:01.338+09:00  INFO 74607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-09-15T04:47:01.340+09:00  INFO 74607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-09-15T04:47:01.342+09:00  INFO 74607 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-09-15T04:47:01.346+09:00  INFO 74607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1726343221346 with initial instances count: 1
+2024-09-15T04:47:01.348+09:00  INFO 74607 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ALBUMS-WS with eureka with status UP
+2024-09-15T04:47:01.348+09:00  INFO 74607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1726343221348, current=UP, previous=STARTING]
+2024-09-15T04:47:01.350+09:00  INFO 74607 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:a47e217937a26d9833d8f7c0726abe1a: registering service...
+2024-09-15T04:47:01.366+09:00  INFO 74607 --- [restartedMain] hlmg.albums.AlbumsApplication            : Started AlbumsApplication in 3.248 seconds (process running for 3.913)
+2024-09-15T04:47:01.380+09:00  INFO 74607 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:a47e217937a26d9833d8f7c0726abe1a - registration status: 204
+2024-09-15T04:47:01.764+09:00  INFO 74607 --- [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-15T04:47:01.765+09:00  INFO 74607 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-15T04:47:01.766+09:00  INFO 74607 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-15T04:47:56.560+09:00  INFO 74607 --- [http-nio-auto-1-exec-3] h.a.io.controllers.AlbumsController      : Returning 2 albums
