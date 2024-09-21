@@ -1,6 +1,5 @@
 package hlmg.users.service;
 
-import feign.FeignException;
 import hlmg.users.data.AlbumServiceClient;
 import hlmg.users.data.UserEntity;
 import hlmg.users.data.UserRepository;
@@ -56,7 +55,9 @@ public class UserServiceImpl implements UserService {
 //        ResponseEntity<List<AlbumResponse>> albumsListResponse = restTemplate.exchange(albumsUrl, HttpMethod.GET, null, new ParameterizedTypeReference<List<AlbumResponse>>() {
 //        });
 //        List<AlbumResponse> albums = albumsListResponse.getBody();
+        log.debug("Before calling albums Microservice");
         List<AlbumResponse> albums = albumServiceClient.getAlbums(userId);
+        log.debug("After calling albums Microservice");
         userDto.setAlbums(albums);
         return userDto;
     }
